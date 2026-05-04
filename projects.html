@@ -27,8 +27,7 @@
     <!-- Map Section -->
     <div class="map-section">
         
-        <div class="map-placeholder"></div>
-    </div>
+        <div class="map-placeholder"></div>`r`n    </div>
 
     <div class="main-content">
         <h1 class="page-main-title">Computer Science Department</h1>
@@ -36,15 +35,14 @@
         <h2 class="projects-title">Projects</h2>
         <h3 style="color: #e58f35; text-align: center; font-style: italic; text-decoration: underline; font-weight: normal; margin-bottom: 40px; font-size: 20px;">Histogram-Github-Commits-In-EFREI</h3>
 
-        <!-- Project 1 -->
-        <div class="project-row">
-            <div class="project-img">
-                <img src="assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-214.jpg" alt="Project 1">
+        <!-- Project 1 (Github Histogram) -->
+        <div class="project-row" style="flex-direction: column;">
+            <div style="width: 100%; max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <canvas id="githubHistogram"></canvas>
             </div>
-            <div class="project-info">
+            <div class="project-info" style="width: 100%; text-align: center; margin-top: 20px;">
                 <h3>A Github made in the department</h3>
-                <p style="font-style: italic; color: #555;">Small Description of this research</p>
-                <button class="btn-orange">En Savoir Plus</button>
+                <p style="font-style: italic; color: #555;">Commits across the cs-efrei organization over the last 52 weeks.</p>
             </div>
         </div>
 
@@ -98,7 +96,9 @@
         <div class="footer-logo-text">Footer</div>
     </footer>
 
-<script src='js/content.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/github-histogram.js"></script>
+    <script src='js/content.js'></script>
     <script src='js/loader.js'></script>
 </body>
 </html>

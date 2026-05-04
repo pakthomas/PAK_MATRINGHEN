@@ -1,4 +1,12 @@
 const siteContent = {
+    "mapMarkers": [
+        { "link": "index.html", "label": "Our Department", "x": 15, "y": 40, "textPosition": "above", "color": "#0c0919" },
+        { "link": "courses.html", "label": "Our Courses", "x": 77.7, "y": 22.5, "textPosition": "above", "color": "#b4df5f" },
+        { "link": "teachers.html", "label": "Our Teachers", "x": 48.7, "y": 67, "textPosition": "under", "color": "#dd4f4f" },
+        { "link": "permanences.html", "label": "Permanences", "x": 28.7, "y": 20, "textPosition": "above", "color": "#518eda" },
+        { "link": "learning.html", "label": "Learning Together", "x": 72.3, "y": 69, "textPosition": "under", "color": "#555555" },
+        { "link": "projects.html", "label": "Our Projects", "x": 91.5, "y": 32, "textPosition": "above", "color": "#e58f35" }
+    ],
     "global": {
         "departmentName": "Computer Science Department",
         "navDept": "Our Department",

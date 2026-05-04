@@ -90,14 +90,25 @@ nav a {
     font-size: 14px;
     padding-bottom: 4px;
     position: relative;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
 }
 
 nav a::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     height: 2px;
+    width: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
     width: 100%;
 }
 
