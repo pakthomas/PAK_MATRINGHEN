@@ -414,6 +414,26 @@ nav a::after {
     font-style: italic;
 }
 
+/* Hide text by default */
+.teacher-card .teacher-header .teacher-info ul {
+    display: none;
+}
+
+/* Show text when hovering the whole card */
+.teacher-card:hover .teacher-header .teacher-info ul {
+    display: block;
+}
+
+/* Arrow animation */
+.teacher-arrow {
+    transition: transform 0.8s;
+}
+
+/* Rotate arrow when hovering the whole card */
+.teacher-card:hover .teacher-arrow {
+    transform: rotate(180deg);
+}
+
 .teacher-card {
     background-color: #d1d1d1;
     border-radius: 12px;
