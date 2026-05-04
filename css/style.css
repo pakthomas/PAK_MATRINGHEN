@@ -1,13 +1,45 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/Fonts/02_POPPINS/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/Fonts/02_POPPINS/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/Fonts/01_GILROY/Gilroy-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/Fonts/01_GILROY/Gilroy-Heavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #f0f0f0; /* Light gray from the PDF */
     color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .page-main-title, .section-title, .courses-title, .teachers-title, .learning-title, .projects-title {
+    font-family: 'Gilroy', sans-serif;
 }
 
 /* Header */
@@ -69,6 +101,8 @@ nav a::after {
 .link-permanences::after { background-color: #518eda; }
 .link-learning { color: white; }
 .link-learning::after { background-color: white; }
+.link-projects { color: #e58f35; }
+.link-projects::after { background-color: #e58f35; }
 .link-contact { color: white; }
 .link-contact::after { background-color: white; }
 .link-about { color: white; }
@@ -105,10 +139,9 @@ nav a::after {
 .map-placeholder {
     width: 80%;
     margin: 0 auto;
-    height: 100px;
-    background: url('assets/images/map-placeholder.png') no-repeat center center;
+    height: 150px;
+    background: url('../assets/images/MAP_NO_TEXT.png') no-repeat center center;
     background-size: contain;
-    /* This will be replaced by actual map elements later */
 }
 
 /* Common Titles */
