@@ -121,20 +121,70 @@ nav a::after {
 /* Interactive Map Section */
 .map-section {
     background-color: #ffffff;
-    padding: 30px 40px;
+    padding: 0;
+    width: 100vw;
     position: relative;
     border-bottom: 2px solid #ddd;
     text-align: center;
-    min-height: 200px;
+    height: 300px;
     animation: fadeUp 1s ease-out;
+    overflow: hidden;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .map-placeholder {
-    width: 80%;
+    width: 100%;
+    max-width: 1200px; /* Limit max width for extremely large screens */
     margin: 0 auto;
-    height: 180px;
+    height: 100%;
     background: url('../assets/images/MAP_NO_TEXT.png') no-repeat center center;
-    background-size: contain;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+/* Map Markers */
+.map-marker {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+}
+
+.map-marker:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.map-dot {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid #555;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.map-line {
+    width: 2px;
+    height: 30px;
+    background-color: #888;
+}
+
+.map-label {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Gilroy', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
 }
 
 /* Common Titles */
