@@ -47,8 +47,9 @@ header {
     background-color: #0c0919; /* Dark navy */
     display: flex;
     align-items: center;
-    padding: 15px 40px;
+    padding: 25px 50px;
     justify-content: space-between;
+    animation: slideDownFade 0.8s ease-out;
 }
 
 .header-logo {
@@ -56,6 +57,15 @@ header {
     align-items: center;
     gap: 10px;
     color: white;
+}
+
+.header-logo img {
+    height: 60px; /* Increased logo size */
+    transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.05);
 }
 
 .header-logo svg {
@@ -111,35 +121,18 @@ nav a::after {
 /* Interactive Map Section */
 .map-section {
     background-color: #ffffff;
-    padding: 20px 40px;
+    padding: 30px 40px;
     position: relative;
     border-bottom: 2px solid #ddd;
     text-align: center;
-    min-height: 150px;
-}
-
-.site-label {
-    position: absolute;
-    left: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 1px dashed #666;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
+    min-height: 200px;
+    animation: fadeUp 1s ease-out;
 }
 
 .map-placeholder {
     width: 80%;
     margin: 0 auto;
-    height: 150px;
+    height: 180px;
     background: url('../assets/images/MAP_NO_TEXT.png') no-repeat center center;
     background-size: contain;
 }
@@ -164,6 +157,7 @@ nav a::after {
 .main-content {
     padding: 20px 40px;
     position: relative;
+    animation: fadeUp 1s ease-out 0.2s both;
 }
 
 .bg-watermark {
@@ -565,4 +559,15 @@ footer {
 .footer-logo-text {
     font-size: 24px;
     font-weight: bold;
+}
+
+/* Animations */
+@keyframes slideDownFade {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
