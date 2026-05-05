@@ -47,8 +47,9 @@ header {
     background-color: #0c0919; /* Dark navy */
     display: flex;
     align-items: center;
-    padding: 15px 40px;
+    padding: 25px 50px;
     justify-content: space-between;
+    animation: slideDownFade 0.8s ease-out;
 }
 
 .header-logo {
@@ -56,6 +57,15 @@ header {
     align-items: center;
     gap: 10px;
     color: white;
+}
+
+.header-logo img {
+    height: 60px; /* Increased logo size */
+    transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.05);
 }
 
 .header-logo svg {
@@ -80,14 +90,25 @@ nav a {
     font-size: 14px;
     padding-bottom: 4px;
     position: relative;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
 }
 
 nav a::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     height: 2px;
+    width: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
     width: 100%;
 }
 
@@ -111,37 +132,70 @@ nav a::after {
 /* Interactive Map Section */
 .map-section {
     background-color: #ffffff;
-    padding: 20px 40px;
+    padding: 0;
+    width: 100vw;
     position: relative;
     border-bottom: 2px solid #ddd;
     text-align: center;
-    min-height: 150px;
-}
-
-.site-label {
-    position: absolute;
-    left: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 1px dashed #666;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
+    height: 300px;
+    animation: fadeUp 1s ease-out;
+    overflow: hidden;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .map-placeholder {
-    width: 80%;
+    width: 100%;
+    max-width: 1200px; /* Limit max width for extremely large screens */
     margin: 0 auto;
-    height: 150px;
+    height: 100%;
     background: url('../assets/images/MAP_NO_TEXT.png') no-repeat center center;
-    background-size: contain;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+/* Map Markers */
+.map-marker {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+}
+
+.map-marker:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.map-dot {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid #555;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.map-line {
+    width: 2px;
+    height: 30px;
+    background-color: #888;
+}
+
+.map-label {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Gilroy', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
 }
 
 /* Common Titles */
@@ -164,6 +218,7 @@ nav a::after {
 .main-content {
     padding: 20px 40px;
     position: relative;
+    animation: fadeUp 1s ease-out 0.2s both;
 }
 
 .bg-watermark {
@@ -585,4 +640,15 @@ footer {
 .footer-logo-text {
     font-size: 24px;
     font-weight: bold;
+}
+
+/* Animations */
+@keyframes slideDownFade {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
