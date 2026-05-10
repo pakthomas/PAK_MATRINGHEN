@@ -470,13 +470,18 @@ nav a:hover::after {
 }
 
 /* Hide text by default */
-.teacher-card .teacher-header .teacher-info ul {
+.teacher-info ul {
     display: none;
 }
 
 /* Show text when hovering the whole card */
-.teacher-card:hover .teacher-header .teacher-info ul {
+.teacher-info:hover ul{
     display: block;
+}
+
+/* Hide picture when popup appears*/
+.teacher-card:hover .teacher-avatar {
+    opacity: 0;
 }
 
 /* Arrow animation */

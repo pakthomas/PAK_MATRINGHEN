@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Courses - Computer Science Department</title>
+    <title>Permanences - Computer Science Department</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -31,11 +31,30 @@
 
     <div class="main-content">
         <h1 class="page-main-title">Computer Science Department</h1>
-        
-        <h2 class="courses-title">Our Courses</h2>
 
-        <div id="dynamic-courses-grid" class="courses-grid">
-            <!-- Courses will be injected here by js/loader.js -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 40px;">
+            <h2 class="section-title" style="margin: 0; font-style: italic;">Permanences</h2>
+            <h2 class="section-title" style="margin: 0; font-style: italic; color: #518eda;">Planning</h2>
+        </div>
+
+        <input type="text" class="search-bar" placeholder="Chercher une matière">
+
+        <div class="permanences-layout">
+            <div id="dynamic-permanences-grid" class="permanences-grid">
+                <!-- Permanences will be injected here -->
+            </div>
+            
+            <div style="flex: 1;">
+                <div id="dynamic-calendar-side" class="planning-box">
+                    <!-- Calendar will be injected here -->
+                </div>
+                <button class="reserve-btn">Réservez sa place</button>
+            </div>
+        </div>
+        
+        <h2 class="section-title" style="margin-top: 40px;">Planning</h2>
+        <div id="dynamic-calendar-main" class="planning-box" style="margin: 0 40px;">
+            <!-- Main calendar injected here -->
         </div>
     </div>
 
