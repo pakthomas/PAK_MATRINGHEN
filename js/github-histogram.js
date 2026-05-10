@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.initHistogram = function() {
     const ctx = document.getElementById('githubHistogram');
     if (!ctx) return;
 
@@ -81,4 +81,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    // We will now call this from loader.js after injecting the canvas, 
+    // but keep a fallback just in case the canvas is hardcoded.
+    setTimeout(() => {
+        if (document.getElementById('githubHistogram') && !document.getElementById('githubHistogram').classList.contains('initialized')) {
+            document.getElementById('githubHistogram').classList.add('initialized');
+            window.initHistogram();
+        }
+    }, 100);
 });

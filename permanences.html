@@ -40,50 +40,22 @@
         <input type="text" class="search-bar" placeholder="Chercher une matière">
 
         <div class="permanences-layout">
-            <div class="permanences-grid">
-                <!-- Course Cards -->
-                <div class="course-card light">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
-                <div class="course-card light">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
-                <div class="course-card">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
-                <div class="course-card">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
-                <div class="course-card">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
-                <div class="course-card">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
-                <div class="course-card">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
-                <div class="course-card">
-                    <h4>Another Course</h4>
-                    <p>Time & Description of the Permanence</p>
-                </div>
+            <div id="dynamic-permanences-grid" class="permanences-grid">
+                <!-- Permanences will be injected here -->
             </div>
             
             <div style="flex: 1;">
-                <div class="planning-box"></div>
+                <div id="dynamic-calendar-side" class="planning-box">
+                    <!-- Calendar will be injected here -->
+                </div>
                 <button class="reserve-btn">Réservez sa place</button>
             </div>
         </div>
         
         <h2 class="section-title" style="margin-top: 40px;">Planning</h2>
-        <div class="planning-box" style="margin: 0 40px;"></div>
+        <div id="dynamic-calendar-main" class="planning-box" style="margin: 0 40px;">
+            <!-- Main calendar injected here -->
+        </div>
     </div>
 
     <!-- Footer -->

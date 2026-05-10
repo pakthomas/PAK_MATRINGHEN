@@ -31,7 +31,23 @@
     <!-- Main Content -->
     <div class="main-content" style="min-height: 50vh;">
         <h1 class="page-main-title" data-text="contact.mainTitle">Contact Us</h1>
-        <p style="text-align: center; font-size: 18px; margin-top: 20px;" data-text="contact.description">Get in touch with the Computer Science Department.</p>
+        <p style="text-align: center; font-size: 18px; margin-top: 20px; margin-bottom: 40px;" data-text="contact.description">Get in touch with the Computer Science Department.</p>
+        
+        <form style="max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px;" onsubmit="event.preventDefault(); alert('Message sent successfully!'); this.reset();">
+            <div>
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: bold;">Name:</label>
+                <input type="text" id="name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;">
+            </div>
+            <div>
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: bold;">Email:</label>
+                <input type="email" id="email" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;">
+            </div>
+            <div>
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: bold;">Message:</label>
+                <textarea id="message" rows="5" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn-green" style="align-self: center; padding: 12px 40px; font-size: 16px;">Envoyer</button>
+        </form>
     </div>
 
     <!-- Footer -->

@@ -620,6 +620,7 @@ footer {
 .footer-logo-text {
     font-size: 24px;
     font-weight: bold;
+    display: none;
 }
 
 /* Animations */

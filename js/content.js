@@ -84,5 +84,49 @@ const siteContent = {
     "contact": {
         "mainTitle": "Contact Us",
         "description": "Get in touch with the Computer Science Department."
-    }
+    },
+    "coursesList": [
+        { "id": "c1", "title": "Web Programming 1: HTML, CSS, JS", "desc": "This course covers the basics of web development.", "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-065.jpg" },
+        { "id": "c2", "title": "Advanced Java", "desc": "Object-oriented programming and advanced Java concepts.", "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-066.jpg" },
+        { "id": "c3", "title": "Database Management", "desc": "SQL and NoSQL database management and design.", "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-154.jpg" },
+        { "id": "c4", "title": "Algorithms & Data Structures", "desc": "Core computer science concepts.", "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-213.jpg" }
+    ],
+    "teachersList": [
+        { "id": "t-amir", "name": "Amir CHACHOUI", "role": "Enseignant en informatique", "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-064.jpg", "contact": "amir.chachoui@efrei.fr" },
+        { "id": "t-yaovi", "name": "Yaovi Giovani SOGLO", "role": "Enseignant, Responsable Pédagogique", "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-732.jpg", "contact": "yaovi.soglo@efrei.fr" }
+    ],
+    "permanencesList": [
+        { "id": "p-1", "courseTitle": "Web Programming 1: HTML, CSS, JS", "teacherId": "t-amir", "teacherName": "Amir CHACHOUI", "day": "Lundi", "start": "14:00", "end": "16:00", "room": "A204" },
+        { "id": "p-2", "courseTitle": "Advanced Java", "teacherId": "t-yaovi", "teacherName": "Yaovi Giovani SOGLO", "day": "Mardi", "start": "10:00", "end": "12:00", "room": "B101" },
+        { "id": "p-3", "courseTitle": "Database Management", "teacherId": "t-amir", "teacherName": "Amir CHACHOUI", "day": "Mercredi", "start": "08:00", "end": "10:00", "room": "C305" },
+        { "id": "p-4", "courseTitle": "Algorithms", "teacherId": "t-yaovi", "teacherName": "Yaovi Giovani SOGLO", "day": "Jeudi", "start": "15:00", "end": "17:00", "room": "A204" }
+    ],
+    "projectsList": [
+        {
+            "id": "proj-github",
+            "type": "histogram",
+            "title": "A Github made in the department",
+            "subtitle": "Commits across the cs-efrei organization over the last 52 weeks."
+        },
+        {
+            "id": "proj-2",
+            "type": "standard",
+            "title": "A Research made in the department",
+            "subtitle": "Small Description of this research",
+            "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-066.jpg",
+            "btnText": "En Savoir Plus"
+        },
+        {
+            "id": "proj-3",
+            "type": "expanded",
+            "title": "A Project made in the department",
+            "img": "assets/images/EFREI-CampusVILLEJUIF-042024@CorinneHameau-213.jpg",
+            "btnText": "Fermer",
+            "paragraphs": [
+                "Full Text about the research",
+                "Full Text about the research",
+                "Full Text about the research"
+            ]
+        }
+    ]
 };
