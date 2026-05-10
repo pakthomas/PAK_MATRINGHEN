@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="teacher-arrow arrow-down"></div>
                 <div class="teacher-expanded" style="display: none; padding-top: 15px;">
+                    <div style="margin-bottom: 15px; font-size: 14px; line-height: 1.6;">${teacher.bio ? teacher.bio : ''}</div>
                     <p style="font-style: italic;">Contact: ${teacher.contact}</p>
                     <button class="btn-red" onclick="window.location.href='mailto:${teacher.contact}'">Contactez ce professeur</button>
                 </div>
